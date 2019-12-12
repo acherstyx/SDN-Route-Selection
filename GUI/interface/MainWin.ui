@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>526</width>
+    <height>354</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>连接</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>断开</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>移动</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>80</y>
+      <width>181</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="verticalScrollMode">
+     <enum>QAbstractItemView::ScrollPerPixel</enum>
+    </property>
+    <property name="horizontalScrollMode">
+     <enum>QAbstractItemView::ScrollPerItem</enum>
+    </property>
+    <property name="allColumnsShowFocus">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+    <attribute name="headerVisible">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="headerCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="headerHighlightSections">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="headerShowSortIndicator" stdset="0">
+     <bool>false</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>项目名</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>信息</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string/>
+     </property>
+    </column>
+    <item>
+     <property name="text">
+      <string>节点名</string>
+     </property>
+     <property name="text">
+      <string>OpenFlow 2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>负载</string>
+     </property>
+     <property name="text">
+      <string>2.1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>连接设备</string>
+     </property>
+     <property name="text">
+      <string>3台</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>h1</string>
+      </property>
+      <property name="text">
+       <string>↑ 20KB/s ↓11KB/S</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>h2</string>
+      </property>
+      <property name="text">
+       <string>↑ 10KB/s ↓21KB/S</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>h3</string>
+      </property>
+      <property name="text">
+       <string>↑ 11KB/s ↓53KB/S</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>已禁用设备</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>h4</string>
+      </property>
+      <property name="text">
+       <string>已禁用</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>连接到的交换机</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>OpenFlow 1</string>
+      </property>
+      <property name="text">
+       <string>时延 10ms</string>
+      </property>
+     </item>
+    </item>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>70</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>526</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
