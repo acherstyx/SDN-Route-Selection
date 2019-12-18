@@ -33,10 +33,13 @@ if __name__ == "__main__":
     topo = MyTopo()
     net = topo.start_mn()
 
-    # 两组Ping，返回节点延迟的相关信息
-    print(net.pingAll())
-    print(net.pingAllFull())
+    # 两组Ping，返回节点延迟的相关信息。断点可以打在print上以查看data中数据格式。以列表存储了延迟信息
+    data= net.pingAll()
+    print(data)
+    data = net.pingAllFull()
+    print(data)
     # 开启mininet的交互界面，不需要直接注释掉
     net.interact()
     
+    # 注意：stop之后网络拓朴会被清除！
     net.stop()
