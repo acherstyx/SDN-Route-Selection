@@ -1,29 +1,37 @@
 import socket
 
+
 class Talker():
-    def __init__(self,port=19991):
-        # initialize
-        # @port: the default port is 19991
-
+    def __init__(self, host, port=19991):
         self.s = socket.socket()
+        self.host = host
+        self.port = port
 
-        self.host = socket.gethostname()
 
-        self.s.bind((self.host,port))
-        self.s.listen(5)
+    def talk(self, msg):
+        # link establish
+        self.s.connect((self.host, self.port))
+        self.s.send(msg)
+        self.s.close()
+        # self.s.close()
 
-    def talk(self,msg):
-        # send a msg to the client throw port 19991
-        # @msg: the msg you want to send
-
-        # c should be the network connection
-        c,addr = self.s.accept()
-
-        print("connect from: ",addr)
-        c.send(msg)
-        c.close()
 
 if __name__ == "__main__":
+    import time
     # test case
-    server = Talker()
-    server.talk("Hello world")
+
+    # server.talk("print('a+d')\n")
+    # server.talk("print(net)\n")
+    input("wait...")
+    server = Talker("centos-host.local")
+    server.talk("net.configLinkStatus('s0','h0','down')\n")
+    time.sleep(5)
+    server = Talker("centos-host.local")
+    server.talk("net.pingAll()\n")
+    input("wait...")
+    server = Talker("centos-host.local")
+    server.talk("net.configLinkStatus('s0','h0','up')\n")
+    time.sleep(5)
+    server = Talker("centos-host.local")
+    server.talk("net.pingAll()\n")
+
