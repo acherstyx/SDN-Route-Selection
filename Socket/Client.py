@@ -6,18 +6,19 @@ class Talker():
         self.s = socket.socket()
         self.host = host
         self.port = port
-
+        self.s.connect((self.host, self.port))
 
     def talk(self, msg):
         # link establish
-        self.s.connect((self.host, self.port))
+
         self.s.send(msg)
-        self.s.close()
+        # self.s.close()
         # self.s.close()
 
 
 if __name__ == "__main__":
     import time
+
     # test case
 
     # server.talk("print('a+d')\n")
@@ -34,4 +35,3 @@ if __name__ == "__main__":
     time.sleep(5)
     server = Talker("centos-host.local")
     server.talk("net.pingAll()\n")
-
