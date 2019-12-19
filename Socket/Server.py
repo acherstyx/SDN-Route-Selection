@@ -23,7 +23,8 @@ class Listener():
         print("connect from: ",addr)
 
         msg = c.recv(1024)
-        self.s.close()
+        #c.close()
+        #self.s.close()
 
         return msg
 
