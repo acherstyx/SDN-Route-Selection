@@ -5,6 +5,7 @@ except:
 
 import mininet.cli as cli
 import time
+import thread
 
 
 class MininetController(Listener):
@@ -19,16 +20,19 @@ class MininetController(Listener):
         self.topo = topo
 
     def Listen(self):
-        net = self.net
-        topo = self.topo
 
         while True:
             try:
                 msg = self.listen()
                 print("Receive command: ", msg)
-                exec msg
+                thread.start_new_thread(self.run, (msg,))
             except Exception as e:
                 print(e)
+
+    def run(self, msg):
+        net = self.net
+        topo = self.topo
+        exec msg
 
 
 if __name__ == "__main__":
@@ -44,7 +48,7 @@ if __name__ == "__main__":
     net = t.start_mn()
 
     ctrl = MininetController(net, t)
-    time.sleep(10)
+    # time.sleep(10)
 
     try:
         net.start()
@@ -58,4 +62,3 @@ if __name__ == "__main__":
     time.sleep(3600)
 
     net.stop()
-

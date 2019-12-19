@@ -1,7 +1,8 @@
 import socket
 
+
 class Listener():
-    def __init__(self,port=19991):
+    def __init__(self, port=19991):
         # initialize
         # @port: the default port is 19991
 
@@ -9,7 +10,7 @@ class Listener():
 
         self.host = socket.gethostname()
 
-        self.s.bind((self.host,port))
+        self.s.bind((self.host, port))
         self.s.listen(5)
 
     def listen(self):
@@ -18,18 +19,18 @@ class Listener():
         # c should be the network connection
         # link establish
 
-        c,addr = self.s.accept()
+        c, addr = self.s.accept()
 
-        print("connect from: ",addr)
+        print("connect from: ", addr)
 
         msg = c.recv(1024)
-        #c.close()
-        #self.s.close()
+        # c.close()
+        # self.s.close()
 
         return msg
+
 
 if __name__ == "__main__":
     # test case
     client = Listener()
     print(client.listen())
-

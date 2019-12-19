@@ -38,7 +38,6 @@ class MyTopo(Topo):
         self.net = net
         return net
 
-
 topos = {'mytopo': (lambda: MyTopo())}
 
 if __name__ == "__main__":
