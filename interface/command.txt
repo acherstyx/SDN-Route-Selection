@@ -1,0 +1,7 @@
+## 将.ui文件转换为.py文件
+Anaconda / Ubuntu
+pyuic5 -o xxxx.py xxxxui
+> pyuic5 -o MainWin.py MainWin.ui
+
+
+界面与逻辑分离
