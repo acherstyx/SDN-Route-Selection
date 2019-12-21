@@ -6,55 +6,34 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>526</width>
-    <height>354</height>
+    <width>565</width>
+    <height>403</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="horizontalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>101</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QPushButton" name="pushButton_3">
-       <property name="text">
-        <string>连接</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="text">
-        <string>断开</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>移动</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QTreeWidget" name="treeWidget">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>80</y>
+      <x>360</x>
+      <y>20</y>
       <width>181</width>
-      <height>171</height>
+      <height>341</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>2</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>201</width>
+      <height>16777215</height>
+     </size>
     </property>
     <property name="layoutDirection">
      <enum>Qt::LeftToRight</enum>
@@ -176,13 +155,74 @@
      </item>
     </item>
    </widget>
-   <widget class="QGraphicsView" name="graphicsView">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>70</y>
-      <width>256</width>
-      <height>192</height>
+      <x>20</x>
+      <y>20</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="Button_Connect">
+         <property name="text">
+          <string>连接</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Button_Break">
+         <property name="text">
+          <string>断开</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Button_Refresh">
+         <property name="text">
+          <string>刷新</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>节点1：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>节点2：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_2"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="matplotlibwidget_dynamic" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>321</width>
+      <height>271</height>
      </rect>
     </property>
    </widget>
@@ -192,12 +232,35 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>526</width>
+     <width>565</width>
      <height>18</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>Window</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuWindow"/>
+   <addaction name="menuHelp"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
