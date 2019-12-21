@@ -14,6 +14,23 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.matplotlibwidget_dynamic.setVisible(True)
         self.matplotlibwidget_dynamic.mpl.update_figure()
 
+    # 信号与槽
+        self.Button_Connect.clicked.connect(self.ConnectMsg)
+        self.Button_Connect.clicked.connect(self.ConnectMsg2)
+        self.Button_Break.clicked.connect(self.BreakMsg)
+
+    def ConnectMsg(self):
+        print('Connect!')
+        self.matplotlibwidget_dynamic.mpl.update_figure()
+
+    def ConnectMsg2(self):
+        print('Connect2!')
+        self.matplotlibwidget_dynamic.mpl.update_figure()
+
+    def BreakMsg(self):
+        print('Break!')
+        self.matplotlibwidget_dynamic.mpl.update_figure()
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     myWin = MainWindow()
