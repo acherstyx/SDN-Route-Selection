@@ -42,3 +42,10 @@ NetworkX+malplotlib （而不是用它自带的库）
 一体化、展示效果、连贯性
 终端要集中，不要零零散散。
 拓扑要复杂（哭笑不得），其实也能更体现自己的方案适用于复杂工程问题。
+
+
+
+MainWin.ui 
+MainWin copy是副本，因为如果.ui更改的话，会覆盖MainWin.py；
+MatplotlibWidget.py 是对 MainWin.ui 里面自定义的一个 MatplotlibWidget 组件的实现；
+Project.py 就是运行程序

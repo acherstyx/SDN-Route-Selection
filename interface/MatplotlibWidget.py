@@ -29,7 +29,7 @@ class MyMplCanvas(FigureCanvas):
         # self.axes.hold(False)  # 每次绘图的时候不保留上一次绘图的结果
         # matplotlib.pyplot.clf()
 
-        FigureCanvas.__init__(self, self.fig)
+        FigureCanvas.__init__(sel                       f, self.fig)
         self.setParent(parent)
 
         '''定义FigureCanvas的尺寸策略，这部分的意思是设置FigureCanvas，使之尽可能的向外填充空间。'''
@@ -44,11 +44,11 @@ class MyMplCanvas(FigureCanvas):
     
 
     '''动态图的绘图逻辑可以在这里修改'''
-    def update_figure(self):
+    TODO:
+    def update_figure(self, an=np.array([[0,0,0,1,2,3,6],[1,2,3,4,5,6,7],[1,2,1,8,1,3,5]])):
         self.fig.suptitle('当前网络拓扑图')
-        row = np.array([0,0,0,1,2,3,6])
-        col = np.array([1,2,3,4,5,6,7])
-        value = np.array([1,2,1,8,1,3,5])
+        row, col, value = an[0], an[1], an[2]
+
         # 生成一个空的有向图
         G = nx.DiGraph()
         # 为这个网络添加节点

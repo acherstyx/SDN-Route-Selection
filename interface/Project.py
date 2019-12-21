@@ -2,6 +2,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from MainWin import Ui_MainWindow
+import numpy as np
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     """
@@ -21,7 +22,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def ConnectMsg(self):
         print('Connect!')
-        self.matplotlibwidget_dynamic.mpl.update_figure()
+        self.matplotlibwidget_dynamic.mpl.update_figure(\
+            np.array([[0,0,0,1,0,3,6],[1,2,3,4,5,6,7],[1,0,0,0,0,3,5]]))
+        myWin.show()
 
     def ConnectMsg2(self):
         print('Connect2!')
