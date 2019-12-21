@@ -10,33 +10,14 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        # 窗体“舞台”
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(526, 354)
+        MainWindow.resize(565, 403)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        ## 按钮与布局
-        self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 20, 178, 31))
-        self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
-
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
-        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.Button_Connect = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        self.Button_Connect.setObjectName("Button_Connect")
-        self.horizontalLayout.addWidget(self.Button_Connect)
-        self.Button_Break = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        self.Button_Break.setObjectName("Button_Break")
-        self.horizontalLayout.addWidget(self.Button_Break)
-        self.Button_Move = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        self.Button_Move.setObjectName("Button_Move")
-        self.horizontalLayout.addWidget(self.Button_Move)
-
         ## TreeWidget
         self.treeWidget = QtWidgets.QTreeWidget(self.centralwidget)
-        self.treeWidget.setGeometry(QtCore.QRect(290, 70, 201, 192)) # 坐标
-        self.treeWidget.setMinimumSize(QtCore.QSize(201, 0))
+        self.treeWidget.setGeometry(QtCore.QRect(360, 20, 181, 341))
+        self.treeWidget.setMinimumSize(QtCore.QSize(2, 0))
         self.treeWidget.setMaximumSize(QtCore.QSize(201, 16777215))
         self.treeWidget.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.treeWidget.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
@@ -45,9 +26,10 @@ class Ui_MainWindow(object):
         self.treeWidget.setAllColumnsShowFocus(False)
         self.treeWidget.setWordWrap(False)
         self.treeWidget.setObjectName("treeWidget")
-        #### Add
-        self.treeWidget.setColumnWidth(0,100)
-        
+        ## add
+        self.treeWidget.setColumnWidth(0,88)
+        self.treeWidget.setColumnWidth(1,110)
+
         item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
         item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
         item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
@@ -62,16 +44,49 @@ class Ui_MainWindow(object):
         self.treeWidget.header().setCascadingSectionResizes(False)
         self.treeWidget.header().setHighlightSections(False)
         self.treeWidget.header().setSortIndicatorShown(False)
+        self.layoutWidget = QtWidgets.QWidget(self.centralwidget)
+        self.layoutWidget.setGeometry(QtCore.QRect(20, 20, 191, 61))
+        self.layoutWidget.setObjectName("layoutWidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.Button_Connect = QtWidgets.QPushButton(self.layoutWidget)
+        self.Button_Connect.setObjectName("Button_Connect")
+        self.horizontalLayout.addWidget(self.Button_Connect)
+        self.Button_Break = QtWidgets.QPushButton(self.layoutWidget)
+        self.Button_Break.setObjectName("Button_Break")
+        self.horizontalLayout.addWidget(self.Button_Break)
+        self.Button_Refresh = QtWidgets.QPushButton(self.layoutWidget)
+        self.Button_Refresh.setObjectName("Button_Refresh")
+        self.horizontalLayout.addWidget(self.Button_Refresh)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.label = QtWidgets.QLabel(self.layoutWidget)
+        self.label.setObjectName("label")
+        self.horizontalLayout_3.addWidget(self.label)
+        self.lineEdit = QtWidgets.QLineEdit(self.layoutWidget)
+        self.lineEdit.setObjectName("lineEdit")
+        self.horizontalLayout_3.addWidget(self.lineEdit)
+        self.label_2 = QtWidgets.QLabel(self.layoutWidget)
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout_3.addWidget(self.label_2)
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.layoutWidget)
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.horizontalLayout_3.addWidget(self.lineEdit_2)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
+        # modify
+        self.matplotlibwidget_dynamic = MatplotlibWidget(self.centralwidget)
+        self.matplotlibwidget_dynamic.setEnabled(True)
+        self.matplotlibwidget_dynamic.setGeometry(QtCore.QRect(20, 90, 321, 271))
+        self.matplotlibwidget_dynamic.setObjectName("matplotlibwidget_dynamic")
 
-        ## 图片
-        self.graphicsView = QtWidgets.QGraphicsView(self.centralwidget)
-        self.graphicsView.setGeometry(QtCore.QRect(10, 70, 256, 192))
-        self.graphicsView.setObjectName("graphicsView")
-        MainWindow.setCentralWidget(self.centralwidget)
-        
         # 菜单栏
+        MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 526, 18))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 565, 18))
         self.menubar.setObjectName("menubar")
         self.menuFile = QtWidgets.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
@@ -93,9 +108,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.Button_Connect.setText(_translate("MainWindow", "连接"))
-        self.Button_Break.setText(_translate("MainWindow", "断开"))
-        self.Button_Move.setText(_translate("MainWindow", "移动"))
         self.treeWidget.headerItem().setText(0, _translate("MainWindow", "项目名"))
         self.treeWidget.headerItem().setText(1, _translate("MainWindow", "信息"))
         __sortingEnabled = self.treeWidget.isSortingEnabled()
@@ -119,9 +131,15 @@ class Ui_MainWindow(object):
         self.treeWidget.topLevelItem(4).child(0).setText(0, _translate("MainWindow", "OpenFlow 1"))
         self.treeWidget.topLevelItem(4).child(0).setText(1, _translate("MainWindow", "时延 10ms"))
         self.treeWidget.setSortingEnabled(__sortingEnabled)
+        self.Button_Connect.setText(_translate("MainWindow", "连接"))
+        self.Button_Break.setText(_translate("MainWindow", "断开"))
+        self.Button_Refresh.setText(_translate("MainWindow", "刷新"))
+        self.label.setText(_translate("MainWindow", "节点1："))
+        self.label_2.setText(_translate("MainWindow", "节点2："))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuEdit.setTitle(_translate("MainWindow", "Edit"))
         self.menuWindow.setTitle(_translate("MainWindow", "Window"))
         self.menuHelp.setTitle(_translate("MainWindow", "Help"))
 
-from interface.MatplotlibWidget import MatplotlibWidget
+## add
+from MatplotlibWidget import MatplotlibWidget

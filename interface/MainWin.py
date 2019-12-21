@@ -14,6 +14,7 @@ class Ui_MainWindow(object):
         MainWindow.resize(565, 403)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+        ## TreeWidget
         self.treeWidget = QtWidgets.QTreeWidget(self.centralwidget)
         self.treeWidget.setGeometry(QtCore.QRect(360, 20, 181, 341))
         self.treeWidget.setMinimumSize(QtCore.QSize(2, 0))
@@ -82,6 +83,7 @@ class Ui_MainWindow(object):
         self.matplotlibwidget_dynamic.setGeometry(QtCore.QRect(20, 90, 321, 271))
         self.matplotlibwidget_dynamic.setObjectName("matplotlibwidget_dynamic")
 
+        # 菜单栏
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 565, 18))

@@ -37,7 +37,6 @@ class MyMplCanvas(FigureCanvas):
         FigureCanvas.updateGeometry(self)
 
     '''启动绘制动态图'''
-    
     def start_dynamic_plot(self, *args, **kwargs):
         timer = QtCore.QTimer(self)
         timer.timeout.connect(self.update_figure) # 每隔一段时间就会触发一次update_figure函数。
@@ -84,4 +83,4 @@ if __name__ == '__main__':
     # ui.mpl.start_dynamic_plot() # 测试动态图效果
     ui.mpl.update_figure()
     ui.show()
-    sys.exit(app.exec_()) 
+    sys.exit(app.exec_())
