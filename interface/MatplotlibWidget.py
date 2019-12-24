@@ -29,7 +29,7 @@ class MyMplCanvas(FigureCanvas):
         # self.axes.hold(False)  # 每次绘图的时候不保留上一次绘图的结果
         # matplotlib.pyplot.clf()
 
-        FigureCanvas.__init__(sel                       f, self.fig)
+        FigureCanvas.__init__(self, self.fig)
         self.setParent(parent)
 
         '''定义FigureCanvas的尺寸策略，这部分的意思是设置FigureCanvas，使之尽可能的向外填充空间。'''
@@ -41,10 +41,10 @@ class MyMplCanvas(FigureCanvas):
         timer = QtCore.QTimer(self)
         timer.timeout.connect(self.update_figure) # 每隔一段时间就会触发一次update_figure函数。
         timer.start(10000)  # 触发的时间间隔为1秒。
-    
+
 
     '''动态图的绘图逻辑可以在这里修改'''
-    TODO:
+    # TODO: Add data from odl
     def update_figure(self, an=np.array([[0,0,0,1,2,3,6],[1,2,3,4,5,6,7],[1,2,1,8,1,3,5]])):
         self.fig.suptitle('当前网络拓扑图')
         row, col, value = an[0], an[1], an[2]
@@ -57,7 +57,7 @@ class MyMplCanvas(FigureCanvas):
         # 在网络中添加带权中的边
         for i in range(np.size(row)):
             G.add_weighted_edges_from([(row[i],col[i],value[i])])
-        
+
         # 为网路设置布局
         pos = nx.shell_layout(G)
         # nx.draw(G, pos, with_labels=True, node_color='white',\
