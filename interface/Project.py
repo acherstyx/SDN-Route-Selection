@@ -16,23 +16,25 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.matplotlibwidget_dynamic.mpl.update_figure()
 
     # 信号与槽
-        self.Button_Connect.clicked.connect(self.ConnectMsg)
-        self.Button_Connect.clicked.connect(self.ConnectMsg2)
-        self.Button_Break.clicked.connect(self.BreakMsg)
+        self.Button_Connect.clicked.connect(self.ConnectTextMsg)
+        self.Button_Connect.clicked.connect(self.ConnectChangeTreeMsg)
+        self.Button_Break.clicked.connect(self.BreakTextMsg)
+        self.Button_Connect.clicked.connect(self.BreakChangeTreeMsg)
+    # TODO:
+    def TextMsg(self):
+        print("up:")
+        print(self.lineEdit.text(), end="")
+        print(self.lineEdit_2.text(), end="")
 
-    def ConnectMsg(self):
-        print('Connect!')
-        self.matplotlibwidget_dynamic.mpl.update_figure(\
-            np.array([[0,0,0,1,0,3,6],[1,2,3,4,5,6,7],[1,0,0,0,0,3,5]]))
-        myWin.show()
+    def BreakTextMsg(self):
+        print("down:")
+        print(self.lineEdit.text(), end="")
+        print(self.lineEdit_2.text(), end="")
 
-    def ConnectMsg2(self):
-        print('Connect2!')
-        self.matplotlibwidget_dynamic.mpl.update_figure()
-
-    def BreakMsg(self):
-        print('Break!')
-        self.matplotlibwidget_dynamic.mpl.update_figure()
+    def ConnectChangeTreeMsg(self):
+        pass
+    def BreakChangeTreeMsg(self):
+        pass
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
