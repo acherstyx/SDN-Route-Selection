@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>567</width>
-    <height>410</height>
+    <width>823</width>
+    <height>481</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QTreeWidget" name="treeWidget">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>20</y>
-      <width>181</width>
-      <height>341</height>
+      <x>600</x>
+      <y>40</y>
+      <width>201</width>
+      <height>401</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -85,73 +85,355 @@
       <string>节点名</string>
      </property>
      <property name="text">
-      <string>OpenFlow 2</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>负载</string>
-     </property>
-     <property name="text">
-      <string>2.1</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>连接设备</string>
-     </property>
-     <property name="text">
-      <string>3台</string>
+      <string>openflow:1</string>
      </property>
      <item>
       <property name="text">
-       <string>h1</string>
+       <string>负载</string>
       </property>
       <property name="text">
-       <string>↑ 20KB/s ↓11KB/S</string>
+       <string>2.1</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>h2</string>
+       <string>连接设备</string>
       </property>
       <property name="text">
-       <string>↑ 10KB/s ↓21KB/S</string>
+       <string>1台</string>
       </property>
+      <item>
+       <property name="text">
+        <string>h2</string>
+       </property>
+       <property name="text">
+        <string>↑ 10KB/s ↓21KB/S</string>
+       </property>
+      </item>
      </item>
      <item>
       <property name="text">
-       <string>h3</string>
+       <string>已禁用设备</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>h3</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>连接到的交换机</string>
       </property>
       <property name="text">
-       <string>↑ 11KB/s ↓53KB/S</string>
+       <string>4</string>
       </property>
+      <item>
+       <property name="text">
+        <string>openflow:2</string>
+       </property>
+       <property name="text">
+        <string>时延 32ms</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>openflow:3</string>
+       </property>
+       <property name="text">
+        <string>时延 37ms</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>openflow:4</string>
+       </property>
+       <property name="text">
+        <string>时延 13ms</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>openflow:5</string>
+       </property>
+       <property name="text">
+        <string>时延 15ms</string>
+       </property>
+      </item>
      </item>
     </item>
     <item>
      <property name="text">
-      <string>已禁用设备</string>
+      <string>节点名</string>
+     </property>
+     <property name="text">
+      <string>openflow:2</string>
      </property>
      <item>
       <property name="text">
-       <string>h4</string>
+       <string>负载</string>
       </property>
       <property name="text">
-       <string>已禁用</string>
+       <string>1.8</string>
       </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>连接设备</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>h3</string>
+       </property>
+       <property name="text">
+        <string>↑ 11KB/s ↓53KB/S</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>已禁用设备</string>
+      </property>
+      <property name="text">
+       <string>无</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>连接到的交换机</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>openflow:1</string>
+       </property>
+       <property name="text">
+        <string>时延 32ms</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>openflow:3</string>
+       </property>
+       <property name="text">
+        <string>时延 32ms</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>openflow:4</string>
+       </property>
+       <property name="text">
+        <string>时延 32ms</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>openflow:5</string>
+       </property>
+       <property name="text">
+        <string>时延 32ms</string>
+       </property>
+      </item>
      </item>
     </item>
     <item>
      <property name="text">
-      <string>连接到的交换机</string>
+      <string>节点名</string>
+     </property>
+     <property name="text">
+      <string>openflow:3</string>
      </property>
      <item>
       <property name="text">
-       <string>OpenFlow 1</string>
+       <string>负载</string>
       </property>
       <property name="text">
-       <string>时延 10ms</string>
+       <string>1.7</string>
       </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>连接设备</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>h3</string>
+       </property>
+       <property name="text">
+        <string>↑ 11KB/s ↓53KB/S</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>已禁用设备</string>
+      </property>
+      <property name="text">
+       <string>无</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>连接到的交换机</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>openflow:1</string>
+       </property>
+       <property name="text">
+        <string>时延 32ms</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>openflow:2</string>
+       </property>
+       <property name="text">
+        <string>时延 32ms</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>openflow:4</string>
+       </property>
+       <property name="text">
+        <string>时延 32ms</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>openflow:5</string>
+       </property>
+       <property name="text">
+        <string>时延 32ms</string>
+       </property>
+      </item>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>节点名</string>
+     </property>
+     <property name="text">
+      <string>openflow:4</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>负载</string>
+      </property>
+      <property name="text">
+       <string>1.6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>连接设备</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>h4</string>
+       </property>
+       <property name="text">
+        <string>↑ 11KB/s ↓53KB/S</string>
+       </property>
+      </item>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>节点名</string>
+     </property>
+     <property name="text">
+      <string>openflow:5</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>负载</string>
+      </property>
+      <property name="text">
+       <string>2.1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>连接设备</string>
+      </property>
+      <property name="text">
+       <string>3台</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>h1</string>
+       </property>
+       <property name="text">
+        <string>↑ 20KB/s ↓11KB/S</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>已禁用设备</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>h4</string>
+       </property>
+       <property name="text">
+        <string>已禁用</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>连接到的交换机</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>openflow:1</string>
+       </property>
+       <property name="text">
+        <string>时延 10ms</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>openflow:2</string>
+       </property>
+       <property name="text">
+        <string>时延 20ms</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>openflow:3</string>
+       </property>
+       <property name="text">
+        <string>时延 13ms</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>openflow:4</string>
+       </property>
+       <property name="text">
+        <string>时延 15ms</string>
+       </property>
+      </item>
      </item>
     </item>
    </widget>
@@ -216,23 +498,14 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="matplotlibwidget_dynamic" native="true">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>90</y>
-      <width>321</width>
-      <height>271</height>
-     </rect>
-    </property>
-   </widget>
+   <widget class="QWidget" name="matplotlibwidget_dynamic" native="true"/>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>567</width>
+     <width>823</width>
      <height>18</height>
     </rect>
    </property>

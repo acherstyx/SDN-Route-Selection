@@ -72,7 +72,7 @@ class MatplotlibWidget(QWidget):
 
     def initUi(self):
         self.layout = QVBoxLayout(self)
-        self.mpl = MyMplCanvas(self, width=5, height=4, dpi=100)
+        self.mpl = MyMplCanvas(self, width=20, height=16, dpi=100)
         self.mpl.start_dynamic_plot()
         # self.mpl_ntb = NavigationToolbar(self.mpl, self)  # 添加完整的 toolbar
         self.layout.addWidget(self.mpl)
