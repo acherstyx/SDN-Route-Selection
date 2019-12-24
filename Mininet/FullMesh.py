@@ -14,8 +14,8 @@ class MyTopo(Topo):
         self.l = []
 
         for i in range(switches):
-            self.s.append(self.addSwitch("s{}".format(i)))
-            self.h.append(self.addHost("h{}".format(i)))
+            self.s.append(self.addSwitch("s{}".format(i+1)))
+            self.h.append(self.addHost("h{}".format(i+1)))
             self.l.append(self.addLink(self.s[i], self.h[i]))
 
         for i in range(switches):
