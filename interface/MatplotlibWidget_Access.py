@@ -37,10 +37,15 @@ class MyMplCanvas(MyMplCanvas_pre):
         value = []
 
         for src in map.AllNodes:
+            if map.AllNodes[src].host_type == 'host':
+                continue
             for dst in map.AllNodes[src].link_list:
+                if map.AllNodes[dst].host_type == 'host':
+                    continue
                 row.append(src)
                 col.append(dst)
                 value.append(1)
+
 
         return row, col, value
 

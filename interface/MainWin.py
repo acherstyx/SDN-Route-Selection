@@ -269,4 +269,4 @@ class Ui_MainWindow(object):
         self.menuHelp.setTitle(_translate("MainWindow", "Help"))
 
 ## add
-from MatplotlibWidget import MatplotlibWidget
+from MatplotlibWidget_Access import MatplotlibWidget

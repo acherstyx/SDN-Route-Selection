@@ -3,7 +3,7 @@ import sys
 from PyQt5.QtWidgets import *
 from MainWin import Ui_MainWindow
 import random
-
+import time
 # Remote ctrl
 from Mininet.Commander import Commander
 
@@ -41,6 +41,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             print(", ")
             print(self.lineEdit_2.text())
             self.cmd.addLink("s" + self.lineEdit.text()[-1:], "s" + self.lineEdit_2.text()[-1:])
+            time.sleep(5)
             self.cmd.pingAll()
 
     def BreakTextMsg(self):
@@ -50,6 +51,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             print(", ")
             print(self.lineEdit_2.text())
             self.cmd.delLink("s" + self.lineEdit.text()[-1:], "s" + self.lineEdit_2.text()[-1:])
+            time.sleep(5)
             self.cmd.pingAll()
 
     # 树控件
