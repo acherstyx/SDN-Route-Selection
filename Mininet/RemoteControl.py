@@ -3,7 +3,7 @@ try:
 except:
     from Server import Listener
 
-import mininet.cli as cli
+from mininet.cli import CLI
 import time
 import thread
 
@@ -20,7 +20,8 @@ class MininetController(Listener):
         self.topo = topo
 
     def Listen(self):
-
+        # start listen
+        print("Start listen")
         while True:
             try:
                 msg = self.listen()
@@ -50,15 +51,16 @@ if __name__ == "__main__":
     ctrl = MininetController(net, t)
     # time.sleep(10)
 
-    try:
-        net.start()
-        net.pingAll()
-        thread.start_new_thread(ctrl.Listen, ())
-    except KeyboardInterrupt:
-        net.stop()
+    net.start()
+    net.pingAll()
+    thread.start_new_thread(ctrl.Listen, ())
 
     print("Can goon")
 
-    time.sleep(3600)
-
+    try:
+        net.interact()
+        time.sleep(3600)
+    except KeyboardInterrupt:
+        net.stop()
     net.stop()
+    

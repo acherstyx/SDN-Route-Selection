@@ -11,7 +11,7 @@ class Talker():
     def talk(self, msg):
         # link establish
 
-        self.s.send(msg)
+        self.s.send(msg.encode('utf-8'))
         # self.s.close()
         # self.s.close()
 

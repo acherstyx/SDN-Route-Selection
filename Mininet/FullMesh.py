@@ -36,6 +36,7 @@ class MyTopo(Topo):
         net.addController('c0', controller=RemoteController, ip='127.0.0.1', port=6653)
         net.start()
         self.net = net
+
         return net
 
 topos = {'mytopo': (lambda: MyTopo())}

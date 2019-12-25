@@ -4,7 +4,7 @@ except:
     from Client import Talker
 import time
 import socket
-import thread
+import _thread as thread
 
 
 class Commander(Talker):
