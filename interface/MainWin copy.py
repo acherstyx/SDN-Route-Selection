@@ -11,12 +11,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(846, 468)
+        MainWindow.resize(823, 481)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         ## TreeWidget
         self.treeWidget = QtWidgets.QTreeWidget(self.centralwidget)
-        self.treeWidget.setGeometry(QtCore.QRect(600, 40, 201, 341))
+        self.treeWidget.setGeometry(QtCore.QRect(600, 40, 201, 401))
         self.treeWidget.setMinimumSize(QtCore.QSize(2, 0))
         self.treeWidget.setMaximumSize(QtCore.QSize(201, 16777215))
         self.treeWidget.setLayoutDirection(QtCore.Qt.LeftToRight)
@@ -28,7 +28,7 @@ class Ui_MainWindow(object):
         self.treeWidget.setObjectName("treeWidget")
         
         ## add
-        self.treeWidget.setColumnWidth(0,120)
+        self.treeWidget.setColumnWidth(0,110)
         self.treeWidget.setColumnWidth(1,120)
 
         item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
@@ -42,6 +42,7 @@ class Ui_MainWindow(object):
         item_2 = QtWidgets.QTreeWidgetItem(item_1)
         item_2 = QtWidgets.QTreeWidgetItem(item_1)
         item_2 = QtWidgets.QTreeWidgetItem(item_1)
+
         item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
         item_1 = QtWidgets.QTreeWidgetItem(item_0)
         item_1 = QtWidgets.QTreeWidgetItem(item_0)
@@ -52,6 +53,7 @@ class Ui_MainWindow(object):
         item_2 = QtWidgets.QTreeWidgetItem(item_1)
         item_2 = QtWidgets.QTreeWidgetItem(item_1)
         item_2 = QtWidgets.QTreeWidgetItem(item_1)
+
         item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
         item_1 = QtWidgets.QTreeWidgetItem(item_0)
         item_1 = QtWidgets.QTreeWidgetItem(item_0)
@@ -62,10 +64,12 @@ class Ui_MainWindow(object):
         item_2 = QtWidgets.QTreeWidgetItem(item_1)
         item_2 = QtWidgets.QTreeWidgetItem(item_1)
         item_2 = QtWidgets.QTreeWidgetItem(item_1)
+
         item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
         item_1 = QtWidgets.QTreeWidgetItem(item_0)
         item_1 = QtWidgets.QTreeWidgetItem(item_0)
         item_2 = QtWidgets.QTreeWidgetItem(item_1)
+
         item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
         item_1 = QtWidgets.QTreeWidgetItem(item_0)
         item_1 = QtWidgets.QTreeWidgetItem(item_0)
@@ -77,10 +81,12 @@ class Ui_MainWindow(object):
         item_2 = QtWidgets.QTreeWidgetItem(item_1)
         item_2 = QtWidgets.QTreeWidgetItem(item_1)
         item_2 = QtWidgets.QTreeWidgetItem(item_1)
+
         self.treeWidget.header().setVisible(True)
         self.treeWidget.header().setCascadingSectionResizes(False)
         self.treeWidget.header().setHighlightSections(False)
         self.treeWidget.header().setSortIndicatorShown(False)
+
         self.layoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.layoutWidget.setGeometry(QtCore.QRect(20, 20, 191, 61))
         self.layoutWidget.setObjectName("layoutWidget")
@@ -118,7 +124,7 @@ class Ui_MainWindow(object):
         # modif
         self.matplotlibwidget_dynamic = MatplotlibWidget(self.centralwidget)
         self.matplotlibwidget_dynamic.setEnabled(True)
-        self.matplotlibwidget_dynamic.setGeometry(QtCore.QRect(20, 90, 321, 271))
+        self.matplotlibwidget_dynamic.setGeometry(QtCore.QRect(20, 90, 541, 351))
         self.matplotlibwidget_dynamic.setObjectName("matplotlibwidget_dynamic")
 
         # 菜单栏
@@ -149,6 +155,7 @@ class Ui_MainWindow(object):
         self.treeWidget.headerItem().setText(0, _translate("MainWindow", "项目名"))
         self.treeWidget.headerItem().setText(1, _translate("MainWindow", "信息"))
         __sortingEnabled = self.treeWidget.isSortingEnabled()
+        # openflow:1
         self.treeWidget.setSortingEnabled(False)
         self.treeWidget.topLevelItem(0).setText(0, _translate("MainWindow", "节点名"))
         self.treeWidget.topLevelItem(0).setText(1, _translate("MainWindow", "openflow:1"))
@@ -161,7 +168,6 @@ class Ui_MainWindow(object):
         self.treeWidget.topLevelItem(0).child(2).setText(0, _translate("MainWindow", "已禁用设备"))
         self.treeWidget.topLevelItem(0).child(2).child(0).setText(0, _translate("MainWindow", "h3"))
         self.treeWidget.topLevelItem(0).child(3).setText(0, _translate("MainWindow", "连接到的交换机"))
-        self.treeWidget.topLevelItem(0).child(3).setText(1, _translate("MainWindow", "4"))
         self.treeWidget.topLevelItem(0).child(3).child(0).setText(0, _translate("MainWindow", "openflow:2"))
         self.treeWidget.topLevelItem(0).child(3).child(0).setText(1, _translate("MainWindow", "时延 32ms"))
         self.treeWidget.topLevelItem(0).child(3).child(1).setText(0, _translate("MainWindow", "openflow:3"))
@@ -170,6 +176,7 @@ class Ui_MainWindow(object):
         self.treeWidget.topLevelItem(0).child(3).child(2).setText(1, _translate("MainWindow", "时延 13ms"))
         self.treeWidget.topLevelItem(0).child(3).child(3).setText(0, _translate("MainWindow", "openflow:5"))
         self.treeWidget.topLevelItem(0).child(3).child(3).setText(1, _translate("MainWindow", "时延 15ms"))
+        # openflow:2
         self.treeWidget.topLevelItem(1).setText(0, _translate("MainWindow", "节点名"))
         self.treeWidget.topLevelItem(1).setText(1, _translate("MainWindow", "openflow:2"))
         self.treeWidget.topLevelItem(1).child(0).setText(0, _translate("MainWindow", "负载"))
@@ -181,7 +188,6 @@ class Ui_MainWindow(object):
         self.treeWidget.topLevelItem(1).child(2).setText(0, _translate("MainWindow", "已禁用设备"))
         self.treeWidget.topLevelItem(1).child(2).setText(1, _translate("MainWindow", "无"))
         self.treeWidget.topLevelItem(1).child(3).setText(0, _translate("MainWindow", "连接到的交换机"))
-        self.treeWidget.topLevelItem(1).child(3).setText(1, _translate("MainWindow", "4"))
         self.treeWidget.topLevelItem(1).child(3).child(0).setText(0, _translate("MainWindow", "openflow:1"))
         self.treeWidget.topLevelItem(1).child(3).child(0).setText(1, _translate("MainWindow", "时延 32ms"))
         self.treeWidget.topLevelItem(1).child(3).child(1).setText(0, _translate("MainWindow", "openflow:3"))
@@ -190,6 +196,7 @@ class Ui_MainWindow(object):
         self.treeWidget.topLevelItem(1).child(3).child(2).setText(1, _translate("MainWindow", "时延 32ms"))
         self.treeWidget.topLevelItem(1).child(3).child(3).setText(0, _translate("MainWindow", "openflow:5"))
         self.treeWidget.topLevelItem(1).child(3).child(3).setText(1, _translate("MainWindow", "时延 32ms"))
+        # openflow:3
         self.treeWidget.topLevelItem(2).setText(0, _translate("MainWindow", "节点名"))
         self.treeWidget.topLevelItem(2).setText(1, _translate("MainWindow", "openflow:3"))
         self.treeWidget.topLevelItem(2).child(0).setText(0, _translate("MainWindow", "负载"))
@@ -200,8 +207,7 @@ class Ui_MainWindow(object):
         self.treeWidget.topLevelItem(2).child(1).child(0).setText(1, _translate("MainWindow", "↑ 11KB/s ↓53KB/S"))
         self.treeWidget.topLevelItem(2).child(2).setText(0, _translate("MainWindow", "已禁用设备"))
         self.treeWidget.topLevelItem(2).child(2).setText(1, _translate("MainWindow", "无"))
-        self.treeWidget.topLevelItem(2).child(3).setText(0, _translate("MainWindow", "连接到的交换机"))
-        self.treeWidget.topLevelItem(2).child(3).setText(1, _translate("MainWindow", "4"))
+        self.treeWidget.topLevelItem(2).child(3).setText(0, _translate("MainWindow", "连接到的交换机")) 
         self.treeWidget.topLevelItem(2).child(3).child(0).setText(0, _translate("MainWindow", "openflow:1"))
         self.treeWidget.topLevelItem(2).child(3).child(0).setText(1, _translate("MainWindow", "时延 32ms"))
         self.treeWidget.topLevelItem(2).child(3).child(1).setText(0, _translate("MainWindow", "openflow:2"))
@@ -210,6 +216,7 @@ class Ui_MainWindow(object):
         self.treeWidget.topLevelItem(2).child(3).child(2).setText(1, _translate("MainWindow", "时延 32ms"))
         self.treeWidget.topLevelItem(2).child(3).child(3).setText(0, _translate("MainWindow", "openflow:5"))
         self.treeWidget.topLevelItem(2).child(3).child(3).setText(1, _translate("MainWindow", "时延 32ms"))
+        # openflow:4
         self.treeWidget.topLevelItem(3).setText(0, _translate("MainWindow", "节点名"))
         self.treeWidget.topLevelItem(3).setText(1, _translate("MainWindow", "openflow:4"))
         self.treeWidget.topLevelItem(3).child(0).setText(0, _translate("MainWindow", "负载"))
@@ -218,6 +225,18 @@ class Ui_MainWindow(object):
         self.treeWidget.topLevelItem(3).child(1).setText(1, _translate("MainWindow", "1"))
         self.treeWidget.topLevelItem(3).child(1).child(0).setText(0, _translate("MainWindow", "h4"))
         self.treeWidget.topLevelItem(3).child(1).child(0).setText(1, _translate("MainWindow", "↑ 11KB/s ↓53KB/S"))
+        self.treeWidget.topLevelItem(2).child(2).setText(0, _translate("MainWindow", "已禁用设备"))
+        self.treeWidget.topLevelItem(2).child(2).setText(1, _translate("MainWindow", "无"))
+        self.treeWidget.topLevelItem(2).child(3).setText(0, _translate("MainWindow", "连接到的交换机"))
+        self.treeWidget.topLevelItem(2).child(3).child(0).setText(0, _translate("MainWindow", "openflow:1"))
+        self.treeWidget.topLevelItem(2).child(3).child(0).setText(1, _translate("MainWindow", "时延 32ms"))
+        self.treeWidget.topLevelItem(2).child(3).child(1).setText(0, _translate("MainWindow", "openflow:2"))
+        self.treeWidget.topLevelItem(2).child(3).child(1).setText(1, _translate("MainWindow", "时延 32ms"))
+        self.treeWidget.topLevelItem(2).child(3).child(2).setText(0, _translate("MainWindow", "openflow:3"))
+        self.treeWidget.topLevelItem(2).child(3).child(2).setText(1, _translate("MainWindow", "时延 32ms"))
+        self.treeWidget.topLevelItem(2).child(3).child(3).setText(0, _translate("MainWindow", "openflow:5"))
+        self.treeWidget.topLevelItem(2).child(3).child(3).setText(1, _translate("MainWindow", "时延 32ms"))
+        # openflow:5
         self.treeWidget.topLevelItem(4).setText(0, _translate("MainWindow", "节点名"))
         self.treeWidget.topLevelItem(4).setText(1, _translate("MainWindow", "openflow:5"))
         self.treeWidget.topLevelItem(4).child(0).setText(0, _translate("MainWindow", "负载"))
