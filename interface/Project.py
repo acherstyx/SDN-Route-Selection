@@ -52,3 +52,4 @@ if __name__ == "__main__":
     myWin.treeWidget.expandAll() # 树节点全部展开
     myWin.show()
     sys.exit(app.exec_())
+## test
