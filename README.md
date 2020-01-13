@@ -4,10 +4,12 @@ Because the traditional network management network equipment configuration is te
 
 ## Code Architecture
 ![总体构架](https://img-blog.csdnimg.cn/20200113124354198.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkyNDg4NQ==,size_16,color_FFFFFF,t_70)
-- interface
-  - 
- 
-- Mininet 
-  - 
 
 ## 
+
+- Overview of SDN Features 
+  - Logical centralization
+    - Logical centralization refers to the black box self-learning network equipment under the traditional network. In the SDN network environment, the separation of transfer control is realized: the control plane of the network element is on the controller, responsible for protocol calculation and generating flow tables; The forwarding plane is only on the network device. The control layer is the control center of the system, responsible for the generation of internal switching paths and border service routes of the network, and is responsible for handling network state change events.
+   - Programmable
+    - Directly control these hardware by compiling code to implement your own protocol or functionb. Northbound interface provides a series of rich APIs, on which developers can design their own applications without having to care about the underlying hardware details
+    
