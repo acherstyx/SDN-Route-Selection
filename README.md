@@ -10,7 +10,7 @@ Because the traditional network management network equipment configuration is te
 Work in progress. Any contribution or discussion is appreciated.
 
 ## CONTENT
--
+
 - Overview of SDN Features 
   - Logical centralization
     - Logical centralization refers to the black box self-learning network equipment under the traditional network. In the SDN network environment, the separation of transfer control is realized: the control plane of the network element is on the controller, responsible for protocol calculation and generating flow tables; The forwarding plane is only on the network device. The control layer is the control center of the system, responsible for the generation of internal switching paths and border service routes of the network, and is responsible for handling network state change events.
