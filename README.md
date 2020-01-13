@@ -1,11 +1,15 @@
 # Visual Network Configuration of Operation and Maintenance Based on SDN
-## Rational
+## RATIONAL
 Because the traditional network management network equipment configuration is tedious, it needs to use the command line to configure one by one, manual operation will lead to the risk of operational errors; and the traditional network maintenance is difficult: the deployment of the new protocol and troubleshooting make network maintenance a very difficult task. In the SDN environment, SDN separates data from control by using the idea of hierarchy. In the control layer, including the logic centralized and programmable controller, it can master the global network information, facilitate operators and researchers to manage and configure the network and deploy new protocols. So we think about the visual network configuration and operation and maintenance in the SDN environment.
 
-## Code Architecture
+
+## CODE ARCHITECTURE
 ![总体构架](https://img-blog.csdnimg.cn/20200113124354198.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkyNDg4NQ==,size_16,color_FFFFFF,t_70)
 
-## 
+## PPRECIATION
+Work in progress. Any contribution or discussion is appreciated.
+
+## CONTENT
 
 - Overview of SDN Features 
   - Logical centralization
@@ -29,4 +33,4 @@ Because the traditional network management network equipment configuration is te
 - Traffic model
   - 
     - A huge challenge in network performance evaluation is how to generate real network traffic. Programs can be used to create artificial network traffic, and a test environment can be established to simulate the real situation. This experiment takes the data center network as the target scenario to restore the real traffic situation inside the data center as much as possible in the mininet simulation environment.There are currently two commonly used traffic models: ① Random model: Host sends packets with equal probability to any other host in the network; ② Probabilistic model: In the network, host number m is probabilistic with Pt, Pa, Pc, send a data packet to the host whose host numbers are (m + i), (m + j), (m + k).We use the iperf tool in mininet to generate UDP traffic in the network. The iperf client transmits the data stream to the iperf server. The server receives and records the relevant information. Although the commands available in mininet's own console are relatively abundant, it does not provide a clear API interface to support user-defined commands. Doing some batch processing in a simulation environment such as a data center with a lot of network nodes requires a lot of work, such as generating traffic between all hosts through iperf. So we need to add custom commands to mininet and complete the expansion of new commands in mininet.
-    - 
+    
